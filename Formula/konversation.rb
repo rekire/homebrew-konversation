@@ -5,9 +5,8 @@ class Konversation < Formula
   sha256 "6123d126278faae2419f5de00411a1b67ae57e0cf2265a5d484ed6f9786baaca"
 
   def install
-    bin.install "#{buildpath}/konversation-cli.jar"
-    File.write("#{bin}/konversation", "java -jar #{prefix}/konversation-cli.jar $@")
-    #system "ls", "-la", "#{libexec}", "#{bin}", "#{prefix}", "#{pkgshare}"
-    #system "echo", "Testing env: libexec=#{libexec} bin=#{bin} prefix=#{prefix} pkgshare=#{pkgshare}"
+    prefix.install "#{buildpath}/konversation-cli.jar"
+    File.write("#{buildpath}/konversation", "java -jar #{prefix}/konversation-cli.jar $@")
+    bin.install "#{buildpath}/konversation"
   end
 end
