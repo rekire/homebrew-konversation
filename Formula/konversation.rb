@@ -7,7 +7,7 @@ class Konversation < Formula
   def install
     prefix.install "#{buildpath}/konversation-cli.jar"
     File.write("#{buildpath}/konversation", "java -jar #{prefix}/konversation-cli.jar $@")
-    system "chmod", "+x", "#{buildpath}/konversation"
     bin.install "#{buildpath}/konversation"
+    system "chmod", "+x", "#{bin}/konversation"
   end
 end
