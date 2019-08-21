@@ -1,8 +1,8 @@
 class Konversation < Formula
   desc "Konversation is a tool to generate rich and diversified responses to the user of a voice application."
   homepage "https://github.com/rewe-digital-incubator/Konversation/"
-  url "https://github.com/rewe-digital-incubator/Konversation/releases/download/v1.1.0-rc2/konversation-cli.jar"
-  sha256 "d784d55fb5558e2f7c3d564d0cda38ae219fee8598cc7b00775840efd8f199b8"
+  url "https://github.com/rewe-digital-incubator/Konversation/releases/download/v1.1.0-rc3/konversation-cli.jar"
+  sha256 "b2e99fa6208036d96fcd972ce498b7b15e3321f350b60df2cf5cffc93256b965"
 
   def install
     libexec.install "#{buildpath}/konversation-cli.jar"
